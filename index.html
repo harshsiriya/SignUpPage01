@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Sign In/ Sign Up Page</title>
+</head>
+
+<body>
+    <div class="form">
+        <h1>
+            Sign Up Page
+        </h1>
+        <div class="container">
+            <form id="myform">
+                <!-- name  -->
+                <div class="name flex">
+                    <div class="fname">
+                        <p>First Name <span>*</span></p>
+                        <input type="text" placeholder="Jhon" id="fname">
+                    </div>
+                    <div class="lname">
+                        <p>Last Name <span>*</span> </p>
+                        <input type="text" placeholder="Doe" id="lname">
+                    </div>
+                </div>
+
+                <!-- email / -->
+                <div class="email">
+                    <p>Email <span>*</span></p>
+                    <input type="text" placeholder="jhon.doe@xyz.com" id="email">
+                </div>
+
+                <!-- mobile  -->
+                <div class="mobile">
+                    <p>Mobile Number <span>*</span></p>
+                    <input type="number" placeholder="9123456780" id="mobile">
+                </div>
+
+                <!-- password  -->
+                <div class="pass flex">
+                    <div class="password">
+                        <p>Password <span>*</span></p>
+                        <input type="password" placeholder="Pass123" id="password">
+                    </div>
+                    <div class="confirm-password">
+                        <p>Confirm Password <span>*</span></p>
+                        <input type="password" placeholder="Pass123" id="Cpassword">
+                    </div>
+                </div>
+            </form>
+
+            <!-- submit  -->
+
+
+
+            <div class="submit-button">
+                <button class="secondary-button" type="submit" onclick="values()">Submit</button>
+            </div>
+
+            <div id="formdata">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function values() {
+            let fname = document.getElementById('fname')
+            let lname = document.getElementById('lname')
+            let email = document.getElementById('email')
+            let mobile = document.getElementById('mobile')
+            let password = document.getElementById('password')
+            let cpassword = document.getElementById('Cpassword')
+            let obj = {
+                firstName: fname.value,
+                lastName: lname.value,
+                email: email.value,
+                mobileNumber: mobile.value,
+                password: password.value,
+                confirmPassword: cpassword.value,
+            }
+            if (fname.value.trim() == "" || lname.value.trim() == "" || email.value.trim() == "" || mobile.value.trim() == "" || password.value.trim() == "" || cpassword.value.trim() == "") {
+                document.getElementById("formdata").innerHTML = `<p>All Fields are required *</p>`
+            }
+            else if (password.value != cpassword.value) {
+                document.getElementById("formdata").innerHTML = `<p>Password and Confirm Password is not matched *</p>`
+            }
+            else {
+                alert("Data Submitted Succefully!")
+                console.log(obj);
+                document.getElementById("myform").reset();
+            }
+
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

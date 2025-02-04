@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* basic utilities  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color : rgba(245, 245, 245, 0.635);
+    --secondary-text-color : #577592;
+    --accent-color : #2294ed;
+    --accent-color-dark : #1d69a3;
+    --padding-inline-section : 20px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}   
+h1{
+    font-size: 3rem;   
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--accent-color-dark);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+span{
+    color: #fc5c7d;
+}
+
+.secondary-button{
+    border: 0.5px solid var(--accent-color-dark);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--accent-color-dark) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+    background-color: transparent;
+}
+
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+
+
+.flex{
+    display: flex;
+}
+/* form styling  */
+
+
+
+.form h1{
+    text-align: center;
+}
+
+.container{
+    align-items: center;
+    background-color: var(--primary-text-color);
+    margin: 50px auto;
+    padding-bottom: 50px;
+    max-width: 65vh;
+    color: var(--accent-color);
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+/* each inputs styling */
+
+/* name  */
+
+.name{
+    margin: 0 50px;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.name input{
+    padding: 5px;
+    background-color: var(--primary-text-color);
+    height: 40px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+.name input:focus{
+    outline: none;
+    border-color: #2294ed;
+    background-color: #b4def3; 
+    transition: 0.5s ease-in-out;
+} 
+
+/* email  */
+
+.email{
+    margin: 25px 50px; 
+}
+
+.email input{
+    padding: 5px    ;
+    background-color: var(--primary-text-color);
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+.email input:focus{
+    outline: none;
+    border-color: #2294ed;
+    background-color: #b4def3;  
+    transition: 0.5s ease-in-out;
+}
+
+/* mobile  */
+
+.mobile{
+    margin: 25px 50px;
+}
+
+.mobile input{
+    padding: 5px    ;
+    background-color: var(--primary-text-color);
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+.mobile input:focus{
+    outline: none;
+    border-color: #2294ed;
+    background-color: #b4def3; 
+    transition: 0.5s ease-in-out;
+}
+
+/* pass  */
+
+.pass{
+    margin: 0 50px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.pass input{
+    padding: 5px;
+    background-color: var(--primary-text-color);
+    height: 40px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+.pass input:focus{
+    outline: none;
+    border-color: #2294ed;
+    background-color: #b4def3;  
+    transition: 0.5s ease-in-out;
+}
+
+/* submit button  */
+
+.submit-button{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: center;
+    text-align: center;
+}
+
+#formdata p{
+    color: #fc5c7d;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* hide input number  */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
